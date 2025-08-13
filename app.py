@@ -71,6 +71,8 @@ def fetch_bls_data():
         series_data['value'] = pd.to_numeric(series_data['value'])
 
         df[series_id] = series_data['value']
+    # Sort the index to ensure the latest data is at the end
+    df.sort_index(inplace=True)
 
     return df
 
