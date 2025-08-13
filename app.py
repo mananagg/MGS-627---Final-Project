@@ -137,7 +137,7 @@ app.layout = html.Div(children=[
             html.Div(
                 children=[
                     html.H3("Nonfarm Jobs Added"),
-                    html.P(f"{bls_df['Monthly Change in Nonfarm Employment'].iloc[-1]:,.0f}", style={'font-size': '2em'})
+                    html.P(f"{bls_df['Monthly Change in Nonfarm Employment'].iloc[-1] * 1000:,.0f}", style={'font-size': '2em'})
                 ],
                 style={'width': '18%', 'display': 'inline-block', 'margin': '1%', 'padding': '1%', 'border': '2px solid #ccc', 'border-radius': '10px'}
             ),
